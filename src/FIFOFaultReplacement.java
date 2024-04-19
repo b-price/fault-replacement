@@ -8,23 +8,12 @@ public class FIFOFaultReplacement extends FaultReplacement{
         for (int j : pageReference) {
             if (!frames.contains(j)) {
                 if (frames.size() >= numFrames) {
-                    frames.removeLast();
+                    frames.remove(0);
                 }
-                frames.addFirst(j);
+                frames.add(j);
                 faults++;
             }
         }
         return faults;
     }
-
-//    private boolean contains(int ref){
-//        for (int i = 0; i < numFrames; i++){
-//            if (frames[i] == ref){
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
-
-
 }

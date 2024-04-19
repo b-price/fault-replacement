@@ -7,5 +7,7 @@ public class Main {
         System.out.println("Number of faults (FIFO): " + fifo.calculateFaults());
         LRUReplacement lru = new LRUReplacement(reference, frames);
         System.out.println("Number of faults (LRU): " + lru.calculateFaults());
+        OptimalReplacement optimal = new OptimalReplacement(reference, frames);
+        System.out.println("Number of faults (Optimal): " + optimal.calculateFaults());
     }
 }
